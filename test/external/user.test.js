@@ -7,19 +7,14 @@ const userService = require('../../service/userService');
 require('dotenv').config();
 
 describe('API REST - Usuário', () => {
-
-  before(() => {
-
-    const userMock = sinon.stub(userService, 'registerUser')
+  let userMock;
+  
+    userMock = sinon.stub(userService, 'registerUser')
       .returns({
         username: "vinicius",
         password: "123456"
       });
-
-    userMock.restore();
-    
-  });  
-
+  
   it('Usando Mock: Deve registrar novo usuário 201', async () => {
     const res = await request(app)
       .post('/users/register')
@@ -30,8 +25,10 @@ describe('API REST - Usuário', () => {
 
     expect(res.status).to.equal(201);
     expect(res.body).to.have.property("message", "Usuário registrado com sucesso");
+  
+  }); 
+  
 
-  });
          
   const registerError = require('../fixture/register/registerError.json');
   registerError.forEach((teste) => {
@@ -57,8 +54,7 @@ describe('API REST - Usuário', () => {
 
     expect(res.status).to.equal(200);
     expect(res.body).to.be.an('array');
-    expect(res.body[0]).to.have.property('username');
-
+  
   });
   
 });

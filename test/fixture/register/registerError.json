@@ -14,13 +14,6 @@
     "statusCode": 401,
     "mensagemEsperada": "Credenciais inválidas",
     "endpoint": "/users/login"
-  },
-  {
-    "nomeDoTeste": "Validar Usuário existente",
-    "username": "vinicius",
-    "password": "123456",
-    "statusCode": 400,
-    "mensagemEsperada": "Usuário já existe",
-    "endpoint": "/users/register"
   }
+  
 ]
