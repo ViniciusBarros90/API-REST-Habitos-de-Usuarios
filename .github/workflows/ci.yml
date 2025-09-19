@@ -5,6 +5,7 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
+  workflow_dispatch:
 
 jobs:
   test:
@@ -23,8 +24,8 @@ jobs:
 
       - name: Criar .env
         run: |
-          echo "BASE_URL_REST=${{ secrets.BASE_URL_REST }}" >> .env
-          
+          echo "BASE_URL_REST=${{ secrets.BASE_URL_REST }}" > .env
+          cat .env
 
       - name: Subir a API REST
         run: npm run start-rest &

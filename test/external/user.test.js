@@ -7,6 +7,7 @@ const userService = require('../../service/userService');
 require('dotenv').config();
 
 describe('API REST - Usuário', () => {
+  console.log("URL base utilizada:", process.env.BASE_URL_REST);
   let userMock;
   
     userMock = sinon.stub(userService, 'registerUser')
