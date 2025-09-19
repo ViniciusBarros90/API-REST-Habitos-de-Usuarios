@@ -1,6 +1,6 @@
 # API REST - Hábitos do Usuário
 
-Criei esta API RESTful para login de usuários utilizando a arquitetura em camadas, seguindo boas práticas de organização de código e responsabilidade única.
+Criei esta API RESTful para registrar hábitos de usuários utilizando a arquitetura em camadas, seguindo boas práticas de organização de código e responsabilidade única.
 
 Esta API permite o cadastro de usuários e hábitos, com autenticação JWT e documentação Swagger
 
@@ -18,7 +18,7 @@ A aplicação inclui:
 
 ✅ Integração com pipeline (CI/CD)
 
-🔧 ** Tecnologias e Ferramentas Utilizadas **
+🔧 **Tecnologias e Ferramentas Utilizadas**
 
 Node.js + Express
 
@@ -34,7 +34,7 @@ Supertest (testes de endpoints HTTP)
 
 dotenv (variáveis de ambiente)
 
-** Padrões de teste: **
+**Padrões de teste:**
 
 Testes unitários com mock
 
