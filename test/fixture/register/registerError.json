@@ -1,0 +1,26 @@
+[
+  {
+    "nomeDoTeste": "Validar Login e senha obrigatórios",
+    "username": "maria",
+    "password": "",
+    "statusCode": 400,
+    "mensagemEsperada": "Login e senha obrigatórios",
+    "endpoint": "/users/register"
+  },
+  {
+    "nomeDoTeste": "Validar Credenciais inválidas",
+    "username": "vinicius",
+    "password": "senhaErrada",
+    "statusCode": 401,
+    "mensagemEsperada": "Credenciais inválidas",
+    "endpoint": "/users/login"
+  },
+  {
+    "nomeDoTeste": "Validar Usuário existente",
+    "username": "vinicius",
+    "password": "123456",
+    "statusCode": 400,
+    "mensagemEsperada": "Usuário já existe",
+    "endpoint": "/users/register"
+  }
+]

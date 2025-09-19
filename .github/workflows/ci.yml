@@ -1,0 +1,36 @@
+name: CI - Testes API Habitos do Usuário
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v3
+
+      - name: Instalar Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Instalar dependências
+        run: npm install
+
+      - name: Subir a API REST
+        run: npm run start-rest &
+
+      - name: Esperar a API estar Funcionando
+        run: sleep 8
+
+      - name: Executar testes controller
+        run: npm run test-controller
+
+      - name: Executar testes external
+        run: npm run test-external
+
+      
