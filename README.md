@@ -1,6 +1,6 @@
 # API REST - Hábitos do Usuário
 
-Criei esta API RESTful para registrar hábitos de usuários utilizando a arquitetura em camadas, seguindo boas práticas de organização de código e responsabilidade única.
+Criei esta API REST para registrar hábitos de usuários utilizando a arquitetura em camadas, seguindo boas práticas de organização de código e responsabilidade única.
 
 Esta API permite o cadastro de usuários e hábitos, com autenticação JWT e documentação Swagger
 
